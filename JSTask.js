@@ -10,9 +10,9 @@ div.classList.add('main');
 document.body.insertBefore(div,null);
 
 
-xhr.onreadystatechange=function() {					//обработчик ответа
+xhr.onreadystatechange = function() {					//обработчик ответа
 	if (this.readyState!=4) return;					//если состояние запроса не '4', то ничего не делать
-	if(this.status!=200) {							//если Statuscode не равен 200(успех), то вывести ошибку
+	if (this.status!=200) {							//если Statuscode не равен 200(успех), то вывести ошибку
 	alert('Ошибка '+this.status+':'+this.statusText);
 	}
 	var response=JSON.parse(xhr.responseText);		//переменная с объектом в формате {results:[...], info:{...}}
